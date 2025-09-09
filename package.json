@@ -2,6 +2,14 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "Difference Generator",
+  "homepage": "https://github.com/olgarozmetova/frontend-project-46#readme",
+  "bugs": {
+    "url": "https://github.com/olgarozmetova/frontend-project-46/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgarozmetova/frontend-project-46.git"
+  },
   "license": "ISC",
   "author": "Olga",
   "type": "module",
