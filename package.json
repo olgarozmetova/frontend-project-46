@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "Olga",
   "type": "module",
-  "main": "src/index.js",
+  "main": "bin/gendiff.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
