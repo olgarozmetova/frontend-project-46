@@ -1,2 +1,4 @@
 node_modules
 demo.cast
+coverage
+.DS_Store

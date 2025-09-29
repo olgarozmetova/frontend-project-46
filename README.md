@@ -1,10 +1,39 @@
+# nodejs-package
+
+[![CI](https://github.com/olgarozmetova/frontend-project-46/actions/workflows/ci.yml/badge.svg)](https://github.com/olgarozmetova/frontend-project-46/actions)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=olgarozmetova_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=olgarozmetova_frontend-project-46)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=olgarozmetova_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=olgarozmetova_frontend-project-46)
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/olgarozmetova/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/olgarozmetova/frontend-project-46/actions)
 
-[![CI](https://github.com/olgarozmetova/frontend-project-46/actions/workflows/ci.yml/badge.svg)](https://github.com/olgarozmetova/frontend-project-46/actions)
+## Description
 
-# Preview
+## Setup
+
+```bash
+make install
+```
+
+## Run tests
+
+```bash
+make test
+```
+
+## Run tests with coverage
+
+See [sonar-project.properties](https://github.com/olgarozmetova/frontend-project-46/blob/main/sonar-project.properties):
+
+```bash
+make test-coverage
+# see ./coverage
+```
+
+## Preview
 
 ### Asciinema genDiff json files:
 
