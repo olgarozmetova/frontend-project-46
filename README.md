@@ -1,9 +1,7 @@
-# nodejs-package
+# Diff Generator
 
 [![CI](https://github.com/olgarozmetova/frontend-project-46/actions/workflows/ci.yml/badge.svg)](https://github.com/olgarozmetova/frontend-project-46/actions)
-
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=olgarozmetova_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=olgarozmetova_frontend-project-46)
-
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=olgarozmetova_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=olgarozmetova_frontend-project-46)
 
 ### Hexlet tests and linter status:
@@ -38,3 +36,7 @@ make test-coverage
 ### Asciinema genDiff json files:
 
 [![asciicast](https://asciinema.org/a/4R4o9jSf7DTgPkGpvDHNbPEcG.svg)](https://asciinema.org/a/4R4o9jSf7DTgPkGpvDHNbPEcG)
+
+### Asciinema genDiff yml files:
+
+[![asciicast](https://asciinema.org/a/N7aTtRwp5460mSDXxFrawNQo5.svg)](https://asciinema.org/a/N7aTtRwp5460mSDXxFrawNQo5)
