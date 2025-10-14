@@ -37,6 +37,10 @@ make test-coverage
 
 [![asciicast](https://asciinema.org/a/4R4o9jSf7DTgPkGpvDHNbPEcG.svg)](https://asciinema.org/a/4R4o9jSf7DTgPkGpvDHNbPEcG)
 
-### Asciinema genDiff yml files:
+### Asciinema genDiff yaml files:
 
 [![asciicast](https://asciinema.org/a/N7aTtRwp5460mSDXxFrawNQo5.svg)](https://asciinema.org/a/N7aTtRwp5460mSDXxFrawNQo5)
+
+### Asciinema genDiff json and yaml files:
+
+[![asciicast](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj.svg)](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj)
