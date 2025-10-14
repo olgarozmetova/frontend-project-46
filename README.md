@@ -44,3 +44,7 @@ make test-coverage
 ### Asciinema genDiff json and yaml files:
 
 [![asciicast](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj.svg)](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj)
+
+### Asciinema genDiff nested json and yaml files:
+
+[![asciicast](https://asciinema.org/a/J4QXXAbvEIiicUxqy2dPIkxZm.svg)](https://asciinema.org/a/J4QXXAbvEIiicUxqy2dPIkxZm)
