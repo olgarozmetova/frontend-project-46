@@ -45,6 +45,10 @@ make test-coverage
 
 [![asciicast](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj.svg)](https://asciinema.org/a/RMbYtyZUL1hS71LStu2j6YXGj)
 
-### Asciinema genDiff nested json and yaml files:
+### Asciinema genDiff nested json and yaml files 'stylish format':
 
 [![asciicast](https://asciinema.org/a/J4QXXAbvEIiicUxqy2dPIkxZm.svg)](https://asciinema.org/a/J4QXXAbvEIiicUxqy2dPIkxZm)
+
+### Asciinema genDiff nested json and yaml files 'plain format':
+
+[![asciicast](https://asciinema.org/a/DWPVjdmZLxgexyvHGyanNf6of.svg)](https://asciinema.org/a/DWPVjdmZLxgexyvHGyanNf6of)
