@@ -4,7 +4,7 @@ import path from 'path'
 import { program } from 'commander'
 import getParsedData from '../src/parsers.js'
 import genDiff from '../src/genDiff.js'
-import formatStylish from '../src/formatters/stylish.js'
+import getFormatter from '../src/formatters/index.js'
 
 program
   .description('Compares two configuration files and shows a difference.')
@@ -20,15 +20,10 @@ program
 
     const diffTree = genDiff(data1, data2)
 
-    let formattedOutput
-    if (options.format === 'stylish') {
-      formattedOutput = formatStylish(diffTree)
-    }
-    else {
-      throw new Error(`Unknown format: ${options.format}`)
-    }
+    const formatter = getFormatter(options.format)
+    const output = formatter(diffTree)
 
-    console.log(formattedOutput)
+    console.log(output)
   })
 
 program.parse()
