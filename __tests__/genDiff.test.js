@@ -6,6 +6,7 @@ import genDiff from '../src/genDiff.js'
 import getParsedData from '../src/parsers.js'
 import formatStylish from '../src/formatters/stylish.js'
 import formatPlain from '../src/formatters/plain.js'
+import formatJson from '../src/formatters/json.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -15,7 +16,7 @@ const getFixturePath = filename =>
 
 const readFile = filename => readFileSync(getFixturePath(filename), 'utf-8')
 
-test('gendiff nested json stylish', () => {
+test('gendiff nested json "stylish format"', () => {
   const file1 = getFixturePath('file1.json')
   const file2 = getFixturePath('file2.json')
   const expected = readFile('expected-stylish.txt').trim()
@@ -29,7 +30,7 @@ test('gendiff nested json stylish', () => {
   expect(result).toBe(expected)
 })
 
-test('gendiff nested yaml stylish', () => {
+test('gendiff nested yaml "stylish format"', () => {
   const file1 = getFixturePath('file1.yml')
   const file2 = getFixturePath('file2.yml')
   const expected = readFile('expected-stylish.txt').trim()
@@ -43,7 +44,7 @@ test('gendiff nested yaml stylish', () => {
   expect(result).toBe(expected)
 })
 
-test('gendiff nested json plain', () => {
+test('gendiff nested json "plain format"', () => {
   const file1 = getFixturePath('file1.json')
   const file2 = getFixturePath('file2.json')
   const expected = readFile('expected-plain.txt').trim()
@@ -57,7 +58,7 @@ test('gendiff nested json plain', () => {
   expect(result).toBe(expected)
 })
 
-test('gendiff nested yaml plain', () => {
+test('gendiff nested yaml "plain format"', () => {
   const file1 = getFixturePath('file1.yml')
   const file2 = getFixturePath('file2.yml')
   const expected = readFile('expected-plain.txt').trim()
@@ -69,4 +70,32 @@ test('gendiff nested yaml plain', () => {
   const result = formatPlain(diffTree)
 
   expect(result).toBe(expected)
+})
+
+test('gendiff nested json "json format"', () => {
+  const file1 = getFixturePath('file1.json')
+  const file2 = getFixturePath('file2.json')
+  const expected = JSON.parse(readFile('expected-json.txt'))
+
+  const data1 = getParsedData(file1)
+  const data2 = getParsedData(file2)
+
+  const diffTree = genDiff(data1, data2)
+  const result = JSON.parse(formatJson(diffTree))
+
+  expect(result).toEqual(expected)
+})
+
+test('gendiff nested yaml "json format"', () => {
+  const file1 = getFixturePath('file1.yml')
+  const file2 = getFixturePath('file2.yml')
+  const expected = JSON.parse(readFile('expected-json.txt'))
+
+  const data1 = getParsedData(file1)
+  const data2 = getParsedData(file2)
+
+  const diffTree = genDiff(data1, data2)
+  const result = JSON.parse(formatJson(diffTree))
+
+  expect(result).toEqual(expected)
 })
