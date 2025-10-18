@@ -2,6 +2,7 @@
 
 import { Command } from 'commander'
 import path from 'path'
+import { fileURLToPath } from 'url'
 import getParsedData from '../src/parsers.js'
 import genDiff from '../src/genDiff.js'
 import getFormatter from '../src/formatters/index.js'
@@ -28,6 +29,9 @@ program
     console.log(output)
   })
 
-program.parse(process.argv)
+const __filename = fileURLToPath(import.meta.url)
+if (process.argv[1] === __filename) {
+  program.parse(process.argv)
+}
 
 export default program
