@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
+import { Command } from 'commander'
 import path from 'path'
-import { program } from 'commander'
 import getParsedData from '../src/parsers.js'
 import genDiff from '../src/genDiff.js'
 import getFormatter from '../src/formatters/index.js'
+
+const program = new Command()
 
 program
   .description('Compares two configuration files and shows a difference.')
@@ -26,4 +28,4 @@ program
     console.log(output)
   })
 
-program.parse()
+program.parse(process.argv)
