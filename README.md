@@ -10,10 +10,20 @@
 
 ## Description
 
+A diff generator is a console application that looks for the difference between two data structures. The utility supports various input formats: YAML, JSON; parses and processes data from them, and outputs the results in plain text, stylish, and JSON formats.
+
 ## Setup
 
 ```bash
 make install
+
+```
+
+## Display help information
+
+```bash
+gendiff -h
+
 ```
 
 ## Run tests
