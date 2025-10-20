@@ -28,9 +28,4 @@ const buildDiffTree = (obj1, obj2) => {
   })
 }
 
-const genDiff = (data1, data2) => {
-  const diffTree = buildDiffTree(data1, data2)
-  return diffTree
-}
-
-export default genDiff
+export default buildDiffTree

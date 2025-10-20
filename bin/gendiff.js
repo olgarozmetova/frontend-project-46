@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import getParsedData from '../src/parsers.js'
-import genDiff from '../src/genDiff.js'
-import getFormatter from '../src/formatters/index.js'
+import gendiff from '../src/index.js'
 
 const program = new Command()
 
@@ -15,23 +11,8 @@ program
   .arguments('<file1> <file2>')
   .option('-f, --format [type]', 'output format', 'stylish')
   .action((file1, file2, options) => {
-    const filepath1 = path.resolve(process.cwd(), '__fixtures__', file1)
-    const filepath2 = path.resolve(process.cwd(), '__fixtures__', file2)
-
-    const data1 = getParsedData(filepath1)
-    const data2 = getParsedData(filepath2)
-
-    const diffTree = genDiff(data1, data2)
-
-    const formatter = getFormatter(options.format)
-    const output = formatter(diffTree)
-
+    const output = gendiff(file1, file2, options.format)
     console.log(output)
   })
 
-const __filename = fileURLToPath(import.meta.url)
-if (process.argv[1] === __filename) {
-  program.parse(process.argv)
-}
-
-export default program
+program.parse(process.argv)

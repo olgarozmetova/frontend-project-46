@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url'
 import path, { dirname } from 'path'
 import { readFileSync } from 'fs'
 import { test, expect } from '@jest/globals'
-import genDiff from '../src/genDiff.js'
+import buildDiffTree from '../src/genDiff.js'
 import getParsedData from '../src/parsers.js'
 import formatStylish from '../src/formatters/stylish.js'
 import formatPlain from '../src/formatters/plain.js'
@@ -24,7 +24,7 @@ test('gendiff nested json "stylish format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = formatStylish(diffTree)
 
   expect(result).toBe(expected)
@@ -38,7 +38,7 @@ test('gendiff nested yaml "stylish format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = formatStylish(diffTree)
 
   expect(result).toBe(expected)
@@ -52,7 +52,7 @@ test('gendiff nested json "plain format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = formatPlain(diffTree)
 
   expect(result).toBe(expected)
@@ -66,7 +66,7 @@ test('gendiff nested yaml "plain format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = formatPlain(diffTree)
 
   expect(result).toBe(expected)
@@ -80,7 +80,7 @@ test('gendiff nested json "json format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = JSON.parse(formatJson(diffTree))
 
   expect(result).toEqual(expected)
@@ -94,7 +94,7 @@ test('gendiff nested yaml "json format"', () => {
   const data1 = getParsedData(file1)
   const data2 = getParsedData(file2)
 
-  const diffTree = genDiff(data1, data2)
+  const diffTree = buildDiffTree(data1, data2)
   const result = JSON.parse(formatJson(diffTree))
 
   expect(result).toEqual(expected)
