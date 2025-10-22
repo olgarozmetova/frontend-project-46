@@ -7,14 +7,15 @@ const getParsedData = (filepath) => {
   const fileContent = fs.readFileSync(absolutePath, 'utf-8')
   const extension = path.extname(filepath)
 
-  if (extension === '.json') {
-    return JSON.parse(fileContent)
+  switch (extension) {
+    case '.json':
+      return JSON.parse(fileContent)
+    case '.yml':
+    case '.yaml':
+      return yaml.load(fileContent)
+    default:
+      throw new Error(`Unsupported file format: ${extension}`)
   }
-  if (extension === '.yml' || extension === '.yaml') {
-    return yaml.load(fileContent)
-  }
-
-  throw new Error(`Unsupported file format: ${extension}`)
 }
 
 export default getParsedData
